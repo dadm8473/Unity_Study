@@ -1,11 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class KingdomSelect : MonoBehaviour
 {
+
     public List<Kingdom> kingdoms = new List<Kingdom>();
 
     [Space]
@@ -14,7 +14,7 @@ public class KingdomSelect : MonoBehaviour
     public GameObject kingdomPointPrefab;
     public GameObject kingdomButtonPrefab;
     public Transform modelTransform;
-    public Transform kingdomButtonContainer;
+    public Transform kingdomButtonsContainer;
 
     [Space]
 
@@ -27,16 +27,19 @@ public class KingdomSelect : MonoBehaviour
 
     void Start()
     {
+
         foreach (Kingdom k in kingdoms)
-        { 
+        {
             SpawnKingdomPoint(k);
         }
 
-        if(kingdoms.Count >0)
+        if (kingdoms.Count > 0)
         {
             LookAtKingdom(kingdoms[0]);
-            UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(kingdomButtonContainer.GetChild(0).gameObject);
+            UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(kingdomButtonsContainer.GetChild(0).gameObject);
         }
+
+
     }
 
     private void SpawnKingdomPoint(Kingdom k)
@@ -51,10 +54,10 @@ public class KingdomSelect : MonoBehaviour
     private void SpawnKingdomButton(Kingdom k)
     {
         Kingdom kingdom = k;
-        Button kingdomButton = Instantiate(kingdomButtonPrefab, kingdomButtonContainer).GetComponent<Button>();
+        Button kingdomButton = Instantiate(kingdomButtonPrefab, kingdomButtonsContainer).GetComponent<Button>();
         kingdomButton.onClick.AddListener(() => LookAtKingdom(kingdom));
 
-        kingdomButton.transform.GetChild(0).GetComponent<Text>().text = k.name;
+        kingdomButton.transform.GetChild(0).GetComponentInChildren<Text>().text = k.name;
     }
 
     public void LookAtKingdom(Kingdom k)
@@ -66,6 +69,14 @@ public class KingdomSelect : MonoBehaviour
         cameraPivot.DOLocalRotate(new Vector3(0, -k.x, 0), lookDuration, RotateMode.Fast).SetEase(lookEase);
 
         FindObjectOfType<FollowTarget>().target = k.visualPoint;
+    }
+
+
+
+    void Update()
+    {
+
+
     }
 
     private void OnDrawGizmos()
@@ -110,6 +121,7 @@ public class KingdomSelect : MonoBehaviour
 public class Kingdom
 {
     public string name;
+
     [Range(-180, 180)]
     public float x;
     [Range(-89, 89)]
