@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class KingdomSelect : MonoBehaviour
 {
-
     public List<Kingdom> kingdoms = new List<Kingdom>();
 
     [Space]
@@ -69,14 +68,6 @@ public class KingdomSelect : MonoBehaviour
         cameraPivot.DOLocalRotate(new Vector3(0, -k.x, 0), lookDuration, RotateMode.Fast).SetEase(lookEase);
 
         FindObjectOfType<FollowTarget>().target = k.visualPoint;
-    }
-
-
-
-    void Update()
-    {
-
-
     }
 
     private void OnDrawGizmos()

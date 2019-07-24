@@ -22,9 +22,9 @@ MonoBehaviour:
     width: 1920
     height: 947
   m_MinSize: {x: 681, y: 498}
-  m_MaxSize: {x: 18004, y: 14048}
+  m_MaxSize: {x: 18008, y: 14048}
   vertical: 0
-  controlID: 1850
+  controlID: 2476
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -127,9 +127,9 @@ MonoBehaviour:
     width: 1424
     height: 947
   m_MinSize: {x: 404, y: 498}
-  m_MaxSize: {x: 14002, y: 14048}
+  m_MaxSize: {x: 14006, y: 14048}
   vertical: 1
-  controlID: 1851
+  controlID: 2477
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 224}
   m_MaxSize: {x: 8004, y: 4024}
   vertical: 0
-  controlID: 1852
+  controlID: 2478
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -212,7 +212,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: d6fbffff4e0c0000740c0000
+      m_ExpandedIDs: befbffff840c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -295,9 +295,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.6302722, y: 0.06389576, z: 1.382415}
+    m_Target: {x: 4.499281, y: 2.0409994, z: 4.5694346}
     speed: 2
-    m_Value: {x: -1.6302722, y: 0.06389576, z: 1.382415}
+    m_Value: {x: 4.499281, y: 2.0409994, z: 4.5694346}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -325,19 +325,19 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.11440441, y: 0.13958776, z: -0.01623841, w: 0.98344463}
+    m_Target: {x: -0.16654164, y: 0.2904353, z: 0.05140844, w: 0.94088703}
     speed: 2
-    m_Value: {x: 0.11440441, y: 0.13958776, z: -0.01623841, w: 0.98344463}
+    m_Value: {x: -0.16654164, y: 0.2904353, z: 0.05140844, w: 0.94088703}
   m_Size:
-    m_Target: 4.376524
+    m_Target: 4.467153
     speed: 2
-    m_Value: 4.376524
+    m_Value: 4.467153
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_ShowGlobalGrid: 1
-  m_LastSceneViewRotation: {x: 0.11440441, y: 0.13958776, z: -0.01623841, w: 0.98344463}
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -454,10 +454,10 @@ MonoBehaviour:
     y: 453
     width: 1424
     height: 494
-  m_MinSize: {x: 332, y: 274}
-  m_MaxSize: {x: 14002, y: 10024}
+  m_MinSize: {x: 336, y: 274}
+  m_MaxSize: {x: 14006, y: 10024}
   vertical: 0
-  controlID: 1734
+  controlID: 2418
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -524,20 +524,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Script
+    - Assets/Materials
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Script
+  - Assets/Materials
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\JSB\Desktop\GitHub\Unity_Study\MixAndJam\Mario_Odyssey's_Kingdom_Select
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 380a0000
-    m_LastClickedID: 2616
-    m_ExpandedIDs: 00000000ac090000060a00001c0a00003c0a0000de0a0000d829000000ca9a3bffffff7f
+    m_SelectedIDs: 160c0000
+    m_LastClickedID: 3094
+    m_ExpandedIDs: 00000000b00900000a0a0000200a0000400a0000e20a0000ee290000f0290000f2290000f4290000f6290000f8290000fa290000fc290000fe29000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -565,7 +565,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ac090000060a00001c0a00003c0a0000de0a0000d829000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000b00900000a0a0000200a0000400a0000e20a0000ee290000f0290000f2290000f4290000f6290000f8290000fa290000fc290000fe29000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -590,8 +590,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 4e0c0000
-    m_LastClickedInstanceID: 3150
+    m_SelectedInstanceIDs: cc090000
+    m_LastClickedInstanceID: 2508
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300001e44000068860200f87cffff0c310000442c0000842b00007629000000000000
     m_RenameOverlay:
@@ -674,7 +674,7 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 3210
+  m_LastSelectedObjectID: 3158
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
