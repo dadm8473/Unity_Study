@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Minecraft.unity
+- path: Assets/Scene/Minecraft.unity
   isLoaded: 1
   isActive: 1
