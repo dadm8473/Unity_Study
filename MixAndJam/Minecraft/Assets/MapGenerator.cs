@@ -92,7 +92,6 @@ public class MapGenerator : MonoBehaviour {
                 }
             }
         }
-
         
         //for (int x = 0; x < Width_x; x++)
         //{
@@ -145,7 +144,7 @@ public class MapGenerator : MonoBehaviour {
         else
         {
             if (visual)
-            {
+            { 
                 GameObject BlockObj = (GameObject)Instantiate(B_SandPrefab, blockpos, Quaternion.identity);
                 worldBlock[(int)blockpos.x, (int)blockpos.y, (int)blockpos.z] = new Block(3, visual, BlockObj);
             }
