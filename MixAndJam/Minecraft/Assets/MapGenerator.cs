@@ -31,6 +31,7 @@ public class MapGenerator : MonoBehaviour {
     static public int Width_x = 125;
     static public int Width_z = 125;
     static public int height  = 125;
+    public float GroundHeightOffset = 20;
     public float Wavelength = 0;    // 진폭
     public float Amplitude = 0;     // 파장의 최대 높이
 
@@ -69,8 +70,7 @@ public class MapGenerator : MonoBehaviour {
     }
 
     private float seed;
-    public float GroundHeightOffset = 20;
-    
+
     IEnumerator MapInit()
     {
         seed = (int)Random.Range(0, 100);
@@ -117,8 +117,8 @@ public class MapGenerator : MonoBehaviour {
 
     IEnumerator CreateBlock(int y, Vector3 blockpos, bool visual)
     {
-        if ( y > 22 )
-        {
+        if ( y > 40 )
+        {   // 눈
             if(visual)
             {
                 GameObject BlockObj = (GameObject)Instantiate(B_SnowPrefab, blockpos, Quaternion.identity);
@@ -129,8 +129,8 @@ public class MapGenerator : MonoBehaviour {
                 worldBlock[(int)blockpos.x, (int)blockpos.y, (int)blockpos.z] = new Block(1, visual, null);
             }
         }
-        else if( y > 15 )
-        {
+        else if( y > 25 )
+        {   // 잔디
             if (visual)
             {
                 GameObject BlockObj = (GameObject)Instantiate(B_GrassPrefab, blockpos, Quaternion.identity);
@@ -142,7 +142,7 @@ public class MapGenerator : MonoBehaviour {
             }
         }
         else
-        {
+        {   // 모래
             if (visual)
             { 
                 GameObject BlockObj = (GameObject)Instantiate(B_SandPrefab, blockpos, Quaternion.identity);
@@ -151,6 +151,38 @@ public class MapGenerator : MonoBehaviour {
             else
             {
                 worldBlock[(int)blockpos.x, (int)blockpos.y, (int)blockpos.z] = new Block(3, visual, null);
+            }
+        }
+
+        if(y > 0 && y < 7 && Random.Range(0, 100) < 3)
+        {   // 광물
+            if(worldBlock[(int)blockpos.x, (int)blockpos.y, (int)blockpos.z].obj != null)
+            {
+                Destroy(worldBlock[(int)blockpos.x, (int)blockpos.y, (int)blockpos.z].obj);
+            }
+
+            if (visual)
+            {
+                GameObject BlockObj = (GameObject)Instantiate(B_GoldPrefab, blockpos, Quaternion.identity);
+                worldBlock[(int)blockpos.x, (int)blockpos.y, (int)blockpos.z] = new Block(4, visual, BlockObj);
+            }
+            else
+            {
+                worldBlock[(int)blockpos.x, (int)blockpos.y, (int)blockpos.z] = new Block(4, visual, null);
+            }
+        }
+
+        // 0층 베드락
+        if (0 == y)
+        {
+            if (visual)
+            {
+                GameObject BlockObj = (GameObject)Instantiate(B_BedPrefab, blockpos, Quaternion.identity);
+                worldBlock[(int)blockpos.x, (int)blockpos.y, (int)blockpos.z] = new Block(5, visual, BlockObj);
+            }
+            else
+            {
+                worldBlock[(int)blockpos.x, (int)blockpos.y, (int)blockpos.z] = new Block(5, visual, null);
             }
         }
 
